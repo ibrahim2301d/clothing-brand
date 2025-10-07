@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ELITE STYLE | Luxury Fashion</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Inter', sans-serif;
+        }
+        .font-luxury {
+            font-family: 'Cinzel', serif;
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, #0c0c0c 0%, #2d2d2d 50%, #1a1a1a 100%);
+        }
+        .gold-gradient {
+            background: linear-gradient(135deg, #D4AF37, #FFD700, #FFEC8B);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .glass-morphism {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .hover-3d {
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        .hover-3d:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 25px 50px -12px rgba(212, 175, 55, 0.25);
+        }
+        .text-shadow-gold {
+            text-shadow: 0 0 30px rgba(212, 175, 55, 0.5);
+        }
+        .floating {
+            animation: floating 3s ease-in-out infinite;
+        }
+        @keyframes floating {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        .service-card {
+            background: linear-gradient(145deg, #1a1a1a, #2d2d2d);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+        }
+    </style>
+</head>
+<body class="bg-black text-white">
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 glass-morphism border-b border-gray-800">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex items-center space-x-4">
+                    <div class="w-12 h-12 bg-gradient-to-r from-yellow-400 to-yellow-600 rounded-full flex items-center justify-center shadow-lg">
+                        <i class="fas fa-crown text-black text-xl"></i>
+                    </div>
+                    <div>
+                        <div class="font-luxury text-2xl gold-gradient font-bold">ELITE STYLE</div>
+                        <div class="text-xs text-gray-400 -mt-1">LUXURY FASHION</div>
+                    </div>
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden lg:flex items-center space-x-10">
+                    <a href="#home" class="text-gray-300 hover:text-yellow-400 transition-all duration-300 font-medium border-b-2 border-transparent hover:border-yellow-400 pb-1">Home</a>
+                    <a href="#products" class="text-gray-300 hover:text-yellow-400 transition-all duration-300 font-medium border-b-2 border-transparent hover:border-yellow-400 pb-1">Products</a>
+                    <a href="#collections" class="text-gray-300 hover:text-yellow-400 transition-all duration-300 font-medium border-b-2 border-transparent hover:border-yellow-400 pb-1">Collections</a>
+                    <a href="#about" class="text-gray-300 hover:text-yellow-400 transition-all duration-300 font-medium border-b-2 border-transparent hover:border-yellow-400 pb-1">About</a>
+                    <a href="#services" class="text-gray-300 hover:text-yellow-400 transition-all duration-300 font-medium border-b-2 border-transparent hover:border-yellow-400 pb-1">Services</a>
+                </div>
+
+                <!-- Right Icons -->
+                <div class="flex items-center space-x-6">
+                    <button class="p-3 text-gray-400 hover:text-yellow-400 transition-all duration-300 hover:scale-110">
+                        <i class="fas fa-search text-lg"></i>
+                    </button>
+                    <button class="p-3 text-gray-400 hover:text-yellow-400 transition-all duration-300 hover:scale-110">
+                        <i class="fas fa-user text-lg"></i>
+                    </button>
+                    <button class="p-3 text-gray-400 hover:text-yellow-400 transition-all duration-300 hover:scale-110">
+                        <i class="fas fa-heart text-lg"></i>
+                    </button>
+                    <button class="p-3 text-gray-400 hover:text-yellow-400 transition-all duration-300 hover:scale-110 relative">
+                        <i class="fas fa-shopping-bag text-lg"></i>
+                        <span class="absolute -top-1 -right-1 bg-yellow-500 text-black text-xs rounded-full h-5 w-5 flex items-center justify-center font-bold">3</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen hero-gradient relative overflow-hidden pt-20">
+        <div class="max-w-7xl mx-auto px-6 pt-32 pb-20 relative z-10">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div class="text-center lg:text-left" >
+                    <div class="inline-block px-4 py-2 glass-morphism rounded-full mb-8 border border-yellow-500/20">
+                        <span class="text-yellow-400 text-sm font-semibold">SPRING COLLECTION 2024</span>
+                    </div>
+                    
+                    <h1 class="text-6xl lg:text-8xl font-luxury font-bold mb-6 leading-tight">
+                        <span class="gold-gradient text-shadow-gold">REDEFINE</span>
+                        <br>
+                        <span class="text-white">LUXURY</span>
+                    </h1>
+                    
+                    <p class="text-xl lg:text-2xl text-gray-300 mb-12 leading-relaxed max-w-2xl">
+                        Where exceptional craftsmanship meets timeless elegance. Experience fashion that transcends trends and defines sophistication.
+                    </p>
+
+                    <div class="flex flex-col sm:flex-row gap-6 justify-center lg:justify-start">
+                        <button class="group bg-gradient-to-r from-yellow-500 to-yellow-600 text-black px-12 py-5 rounded-full font-semibold text-lg hover:shadow-2xl transition-all duration-500 transform hover:scale-105">
+                            <span class="flex items-center">
+                                <i class="fas fa-shopping-bag mr-3"></i>
+                                SHOP NOW
+                                <i class="fas fa-arrow-right ml-3 group-hover:translate-x-2 transition-transform duration-300"></i>
+                            </span>
+                        </button>
+                        
+                        <button class="group border-2 border-yellow-500 text-yellow-400 px-12 py-5 rounded-full font-semibold text-lg hover:bg-yellow-500 hover:text-black transition-all duration-500 transform hover:scale-105">
+                            <i class="fas fa-star mr-3"></i>
+                            EXPLORE
+                        </button>
+                    </div>
+                </div>
+
+                <div class="relative">
+                    <img src="leila-goldkuhl.webp " 
+                         alt="Luxury Fashion"
+                         class="w-full h-[900px] object-cover rounded-3xl shadow-2xl floating">
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Products Section -->
+    <section id="products" class="py-24 bg-gradient-to-b from-black to-gray-900">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-5xl lg:text-6xl font-luxury font-bold mb-6">
+                    <span class="gold-gradient">FEATURED</span>
+                    <span class="text-white"> PRODUCTS</span>
+                </h2>
+                <p class="text-xl text-gray-400 max-w-3xl mx-auto">
+                    Discover our curated selection of premium fashion items
+                </p>
+            </div>
+
+            <!-- Product Filters -->
+            <div class="flex flex-wrap gap-4 justify-center mb-12">
+                <button class="px-6 py-3 bg-yellow-500 text-black rounded-full font-semibold">All Products</button>
+                <button class="px-6 py-3 glass-morphism text-white rounded-full font-semibold hover:bg-yellow-500 hover:text-black transition-all">Men</button>
+                <button class="px-6 py-3 glass-morphism text-white rounded-full font-semibold hover:bg-yellow-500 hover:text-black transition-all">Women</button>
+                <button class="px-6 py-3 glass-morphism text-white rounded-full font-semibold hover:bg-yellow-500 hover:text-black transition-all">Accessories</button>
+                <button class="px-6 py-3 glass-morphism text-white rounded-full font-semibold hover:bg-yellow-500 hover:text-black transition-all">New Arrivals</button>
+            </div>
+
+            <!-- Products Grid -->
+            <div class="product-grid">
+                <!-- Product 1 -->
+                <div class="group bg-gray-900 rounded-3xl overflow-hidden hover-3d border border-gray-800">
+                    <div class="relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2036&q=80" 
+                             alt="Designer Jacket"
+                             class="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute top-4 right-4">
+                            <span class="bg-red-500 text-white px-3 py-1 rounded-full text-sm font-semibold">SALE</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-luxury text-white mb-2">Premium Leather Jacket</h3>
+                        <p class="text-gray-400 mb-4">Genuine leather with premium finish</p>
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <span class="text-2xl font-bold text-yellow-400">$299</span>
+                                <span class="text-gray-500 line-through ml-2">$399</span>
+                            </div>
+                            <button class="bg-yellow-500 text-black px-6 py-2 rounded-full font-semibold hover:bg-yellow-400 transition-colors">
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="group bg-gray-900 rounded-3xl overflow-hidden hover-3d border border-gray-800">
+                    <div class="relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2068&q=80" 
+                             alt="Luxury Watch"
+                             class="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-700">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-luxury text-white mb-2">Elite Chronograph Watch</h3>
+                        <p class="text-gray-400 mb-4">Swiss movement, sapphire crystal</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-2xl font-bold text-yellow-400">$1,299</span>
+                            <button class="bg-yellow-500 text-black px-6 py-2 rounded-full font-semibold hover:bg-yellow-400 transition-colors">
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="group bg-gray-900 rounded-3xl overflow-hidden hover-3d border border-gray-800">
+                    <div class="relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1544441893-675973e31985?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
+                             alt="Designer Handbag"
+                             class="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute top-4 right-4">
+                            <span class="bg-green-500 text-white px-3 py-1 rounded-full text-sm font-semibold">NEW</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-luxury text-white mb-2">Designer Leather Handbag</h3>
+                        <p class="text-gray-400 mb-4">Handcrafted Italian leather</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-2xl font-bold text-yellow-400">$899</span>
+                            <button class="bg-yellow-500 text-black px-6 py-2 rounded-full font-semibold hover:bg-yellow-400 transition-colors">
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 4 -->
+                <div class="group bg-gray-900 rounded-3xl overflow-hidden hover-3d border border-gray-800">
+                    <div class="relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
+                             alt="Premium Sneakers"
+                             class="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-700">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-luxury text-white mb-2">Limited Edition Sneakers</h3>
+                        <p class="text-gray-400 mb-4">Premium materials, exclusive design</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-2xl font-bold text-yellow-400">$450</span>
+                            <button class="bg-yellow-500 text-black px-6 py-2 rounded-full font-semibold hover:bg-yellow-400 transition-colors">
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 5 -->
+                <div class="group bg-gray-900 rounded-3xl overflow-hidden hover-3d border border-gray-800">
+                    <div class="relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1611312449408-fcece27cdbb7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80" 
+                             alt="Silk Dress"
+                             class="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-700">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-luxury text-white mb-2">Evening Silk Gown</h3>
+                        <p class="text-gray-400 mb-4">Pure silk, hand-embroidered details</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-2xl font-bold text-yellow-400">$1,200</span>
+                            <button class="bg-yellow-500 text-black px-6 py-2 rounded-full font-semibold hover:bg-yellow-400 transition-colors">
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 6 -->
+                <div class="group bg-gray-900 rounded-3xl overflow-hidden hover-3d border border-gray-800">
+                    <div class="relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2074&q=80" 
+                             alt="Jewelry Set"
+                             class="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute top-4 right-4">
+                            <span class="bg-blue-500 text-white px-3 py-1 rounded-full text-sm font-semibold">LIMITED</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-luxury text-white mb-2">Diamond Jewelry Set</h3>
+                        <p class="text-gray-400 mb-4">18K gold with genuine diamonds</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-2xl font-bold text-yellow-400">$3,499</span>
+                            <button class="bg-yellow-500 text-black px-6 py-2 rounded-full font-semibold hover:bg-yellow-400 transition-colors">
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-12">
+                <button class="border-2 border-yellow-500 text-yellow-400 px-12 py-4 rounded-full font-semibold text-lg hover:bg-yellow-500 hover:text-black transition-all duration-300">
+                    View All Products
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-24 bg-black">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h2 class="text-5xl lg:text-6xl font-luxury font-bold mb-8">
+                        <span class="gold-gradient">OUR</span>
+                        <span class="text-white"> STORY</span>
+                    </h2>
+                    <p class="text-xl text-gray-300 mb-6 leading-relaxed">
+                        Founded in 2010, ELITE STYLE emerged from a passion for exceptional craftsmanship and timeless elegance. We believe that true luxury lies in the details - the perfect stitch, the finest materials, and the art of creation.
+                    </p>
+                    <p class="text-xl text-gray-300 mb-8 leading-relaxed">
+                        Our journey began in Milan, where we partnered with master artisans who shared our vision for creating fashion that transcends trends and becomes part of your legacy.
+                    </p>
+                    <div class="grid grid-cols-3 gap-8 mb-8">
+                        <div class="text-center">
+                            <div class="text-3xl font-luxury text-yellow-400 font-bold">14+</div>
+                            <div class="text-gray-400">Years Experience</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-luxury text-yellow-400 font-bold">50+</div>
+                            <div class="text-gray-400">Master Artisans</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-luxury text-yellow-400 font-bold">100+</div>
+                            <div class="text-gray-400">Countries Served</div>
+                        </div>
+                    </div>
+                    <button class="bg-yellow-500 text-black px-8 py-4 rounded-full font-semibold hover:bg-yellow-400 transition-colors">
+                        Learn More About Us
+                    </button>
+                </div>
+                <div class="grid grid-cols-2 gap-6">
+                    <img src="https://images.unsplash.com/photo-1445205170230-053b83016050?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80" 
+                         alt="Craftsmanship"
+                         class="rounded-2xl h-64 object-cover hover-3d">
+                    <img src="https://images.unsplash.com/photo-1586083702768-190ae093d34d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2056&q=80" 
+                         alt="Materials"
+                         class="rounded-2xl h-64 object-cover mt-12 hover-3d">
+                    <img src="https://images.unsplash.com/photo-1566470008446-207711c53e14?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80" 
+                         alt="Design"
+                         class="rounded-2xl h-64 object-cover hover-3d">
+                    <img src="https://images.unsplash.com/photo-1586083702768-190ae093d34d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2056&q=80" 
+                         alt="Quality"
+                         class="rounded-2xl h-64 object-cover mt-12 hover-3d">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-24 bg-gradient-to-b from-gray-900 to-black">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-5xl lg:text-6xl font-luxury font-bold mb-6">
+                    <span class="gold-gradient">PREMIUM</span>
+                    <span class="text-white"> SERVICES</span>
+                </h2>
+                <p class="text-xl text-gray-400 max-w-3xl mx-auto">
+                    Experience luxury beyond the purchase with our exclusive services
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="service-card rounded-3xl p-8 hover-3d">
+                    <div class="w-16 h-16 bg-yellow-500 rounded-2xl flex items-center justify-center mb-6">
+                        <i class="fas fa-tshirt text-black text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-luxury text-white mb-4">Personal Styling</h3>
+                    <p class="text-gray-400 mb-6">
+                        One-on-one consultation with our expert stylists to create your perfect look
+                    </p>
+                    <ul class="space-y-2 text-gray-300">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-yellow-400 mr-3"></i>
+                            Custom outfit planning
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-yellow-400 mr-3"></i>
+                            Seasonal wardrobe updates
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-yellow-400 mr-3"></i>
+                            Event-specific styling
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="service-card rounded-3xl p-8 hover-3d">
+                    <div class="w-16 h-16 bg-yellow-500 rounded-2xl flex items-center justify-center mb-6">
+                        <i class="fas fa-cut text-black text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-luxury text-white mb-4">Custom Tailoring</h3>
+                    <p class="text-gray-400 mb-6">
+                        Bespoke alterations and custom creations for the perfect fit
+                    </p>
+                    <ul class="space-y-2 text-gray-300">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-yellow-400 mr-3"></i>
+                            Precision measurements
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-yellow-400 mr-3"></i>
+                            Premium fabric selection
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-yellow-400 mr-3"></i>
+                            Expert craftsmanship
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="service-card rounded-3xl p-8 hover-3d">
+                    <div class="w-16 h-16 bg-yellow-500 rounded-2xl flex items-center justify-center mb-6">
+                        <i class="fas fa-gem text-black text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-luxury text-white mb-4">VIP Treatment</h3>
+                    <p class="text-gray-400 mb-6">
+                        Exclusive benefits and privileges for our valued customers
+                    </p>
+                    <ul class="space-y-2 text-gray-300">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-yellow-400 mr-3"></i>
+                            Private shopping events
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-yellow-400 mr-3"></i>
+                            Early access to collections
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-yellow-400 mr-3"></i>
+                            Priority alterations
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black border-t border-gray-800 pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+                <!-- Company Info -->
+                <div>
+                    <div class="flex items-center space-x-3 mb-6">
+                        <div class="w-10 h-10 bg-gradient-to-r from-yellow-400 to-yellow-600 rounded-full flex items-center justify-center">
+                            <i class="fas fa-crown text-black"></i>
+                        </div>
+                        <div class="font-luxury text-xl gold-gradient font-bold">ELITE STYLE</div>
+                    </div>
+                    <p class="text-gray-400 mb-6 leading-relaxed">
+                        Redefining luxury fashion with exceptional craftsmanship and timeless elegance since 2010.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-yellow-500 hover:text-black transition-all">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-yellow-500 hover:text-black transition-all">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-yellow-500 hover:text-black transition-all">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-yellow-500 hover:text-black transition-all">
+                            <i class="fab fa-pinterest"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-lg font-luxury text-white mb-6">QUICK LINKS</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-400 hover:text-yellow-400 transition-colors">Home</a></li>
+                        <li><a href="#products" class="text-gray-400 hover:text-yellow-400 transition-colors">Shop</a></li>
+                        <li><a href="#collections" class="text-gray-400 hover:text-yellow-400 transition-colors">Collections</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-yellow-400 transition-colors">About Us</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-yellow-400 transition-colors">Services</a></li>
+                    </ul>
+                </div>
+
+                <!-- Customer Service -->
+                <div>
+                    <h3 class="text-lg font-luxury text-white mb-6">CUSTOMER CARE</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-400 hover:text-yellow-400 transition-colors">Contact Us</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-yellow-400 transition-colors">Shipping Info</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-yellow-400 transition-colors">Returns & Exchanges</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-yellow-400 transition-colors">Size Guide</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-yellow-400 transition-colors">FAQs</a></li>
+                    </ul>
+                </div>
+
+                <!-- Newsletter -->
+                <div>
+                    <h3 class="text-lg font-luxury text-white mb-6">NEWSLETTER</h3>
+                    <p class="text-gray-400 mb-4">Subscribe for exclusive updates and offers</p>
+                    <div class="flex mb-4">
+                        <input type="email" placeholder="Your email address" 
+                               class="flex-1 px-4 py-3 bg-gray-800 border border-gray-700 rounded-l-lg focus:ring-2 focus:ring-yellow-500 focus:border-transparent">
+                        <button class="bg-yellow-500 text-black px-6 py-3 rounded-r-lg font-semibold hover:bg-yellow-400 transition-colors">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                    <p class="text-xs text-gray-500">By subscribing, you agree to our Privacy Policy</p>
+                </div>
+            </div>
+
+            <!-- Bottom Footer -->
+            <div class="border-t border-gray-800 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-gray-400 text-sm mb-4 md:mb-0">
+                        &copy; 2024 ELITE STYLE. All rights reserved.
+                    </p>
+                    <div class="flex space-x-6 text-sm text-gray-400">
+                        <a href="#" class="hover:text-yellow-400 transition-colors">Privacy Policy</a>
+                        <a href="#" class="hover:text-yellow-400 transition-colors">Terms of Service</a>
+                        <a href="#" class="hover:text-yellow-400 transition-colors">Cookie Policy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Add to cart functionality
+        document.querySelectorAll('button:contains("Add to Cart")').forEach(button => {
+            button.addEventListener('click', function() {
+                const product = this.closest('.group').querySelector('h3').textContent;
+                alert(`Added ${product} to cart!`);
+            });
+        });
+    </script>
+</body>
+</html>
